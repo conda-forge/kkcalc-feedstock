@@ -1,5 +1,5 @@
 {% set name = "kkcalc" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kkcalc-{{ version }}.tar.gz
-  sha256: bc225787229c3ba0a0593ae31e0cc9d80f61fc28a0902939637579b5c953a428
+  sha256: 5c247800953d7152551de64b1e7f61fb3f35945df0100ef80d218354540077be
 
 build:
   number: 0

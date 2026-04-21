@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/kkcalc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/kkcalc-{{ version }}.tar.gz
   sha256: bc225787229c3ba0a0593ae31e0cc9d80f61fc28a0902939637579b5c953a428
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - kkcalc=kkcalc.kk_gui:start_wx
   noarch: python
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - wxpython
@@ -36,6 +36,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://bitbucket.org/benajamin/kkcalc
